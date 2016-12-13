@@ -17,7 +17,7 @@ class App extends Component {
     console.log(this.state.images);
     return (
       <div>
-        <ImageList />
+        <ImageList images={this.state.images}/>
       </div>
     )
   }

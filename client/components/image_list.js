@@ -2,16 +2,17 @@
 import React from 'react'
 import ImageDetail from './image_detail'
 
-const IMAGES = [
-  { title: 'Pen', link: 'https://dummyimage.com/600x400'},
-  { title: 'tree', link: 'https://dummyimage.com/600x400'},
-  { title: 'book', link: 'https://dummyimage.com/600x400'}
-];
+var ImageList = (props) => {
+  const validImages = props.images.filter( (img) => {
+    return !img.is_album
 
-var ImageList = () => {
-  const RenderedImages = IMAGES.map( (img) => {
-    return <ImageDetail key={img.title} image={img} />
-  });
+  })
+
+  const RenderedImages = validImages.map( (img) => {
+    return (
+      <ImageDetail key={img.title} image={img} />
+    )
+  })
 
   return (
       <div>
