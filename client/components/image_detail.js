@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import ImageScore from './image_score'
 
 const ImageDetail = (props) => {
