@@ -1,5 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import axios from 'axios'
 import ImageList from './components/image_list.js'
 
 const App = () => {
@@ -12,4 +13,6 @@ const App = () => {
 
 Meteor.startup(() => {
   ReactDOM.render(<App />, document.getElementById('container'))
+  axios.get('https://api.imgur.com/3/gallery/hot/viral/0')
+  .then( (response) => console.log(response))
 })

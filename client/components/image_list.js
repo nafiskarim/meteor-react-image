@@ -9,8 +9,8 @@ const IMAGES = [
 ];
 
 var ImageList = () => {
-  const RenderedImages = IMAGES.map(function (img) {
-    return <ImageDetail image={img} />
+  const RenderedImages = IMAGES.map( (img) => {
+    return <ImageDetail key={img.title} image={img} />
   });
 
   return (
